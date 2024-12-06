@@ -1,0 +1,21 @@
+#app {
+    position: relative;
+    background-color: red;
+    border: 1px solid black;
+    margin: 5vh;
+    width: 300px; /* Definierte Breite des Containers */
+    height: 300px; /* Definierte Höhe des Containers */
+}
+
+#card-image {
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    right: 0; /* Position innerhalb des Containers */
+    transform: translate(-50%, -50%); /* Zentrierung innerhalb des Containers */
+    transition: right 1s ease-in-out, transform 1s ease-in-out; /* Sicherstellen, dass die Transition auch hier definiert ist */
+}
+
+#card-image.hide {
+    right: -100%; /* Position außerhalb des Containers */
+}
