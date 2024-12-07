@@ -1,3 +1,17 @@
+.star::before {
+    content: url(star.svg);
+    display: block;
+    width: 22px;
+    height: 22px;
+    opacity: 0.5;
+    color: mediumaquamarine;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
 #app {
     position: relative;
     background-color: red;
@@ -7,7 +21,7 @@
     height: 300px; /* Definierte Höhe des Containers */
 }
 
-#card-image {
+.card-image {
     height: 200px;
     position: absolute;
     top: 50%;
@@ -16,6 +30,41 @@
     transition: right 1s ease-in-out, transform 1s ease-in-out; /* Sicherstellen, dass die Transition auch hier definiert ist */
 }
 
-#card-image.hide {
+.card-image.hide {
     right: -100%; /* Position außerhalb des Containers */
+}
+
+.effect {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+.effect .item {
+    position: absolute;
+}
+.effect .item.star1 {
+    top: 10%;
+    left: 21%;
+    transform: rotate(90deg);
+}
+.effect .item.star2 {
+    top: 29%;
+    left: 65%;
+    transform: rotate(50deg);
+}
+.effect .item.star3 {
+    left: 16%;
+    top: 57%;
+    transform: rotate(76deg);
+}
+.effect .item.star4 {
+    left: 53%;
+    top: 67%;
+    transform: rotate(5deg);
+}
+.effect .item.star5 {
+    left: 85%;
+    top: 48%;
+    transform: rotate(165deg);
 }
