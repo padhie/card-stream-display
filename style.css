@@ -1,12 +1,3 @@
-.star::before {
-    content: url(star.svg);
-    display: block;
-    width: 22px;
-    height: 22px;
-    opacity: 0.5;
-    color: mediumaquamarine;
-}
-
 img {
     max-width: 100%;
     max-height: 100%;
@@ -17,37 +8,35 @@ img {
     background-color: red;
     border: 1px solid black;
     margin: 5vh;
-    width: 300px; /* Definierte Breite des Containers */
-    height: 300px; /* Definierte Höhe des Containers */
+    width: 300px;
+    height: 300px;
 }
 
 .card-image {
     height: 200px;
     position: absolute;
-    top: 50%;
-    right: 0; /* Position innerhalb des Containers */
+    right: 12%;
     transform: translate(-50%, -50%); /* Zentrierung innerhalb des Containers */
-    transition: right 1s ease-in-out, transform 1s ease-in-out; /* Sicherstellen, dass die Transition auch hier definiert ist */
+    transition: bottom 1s ease-in-out, transform 1s ease-in-out; /* Sicherstellen, dass die Transition auch hier definiert ist */
+}
+.card-image.hide {
+    bottom: -100% !important;
 }
 
 .card-image#card1 {
-    right: 20%;
+    bottom: -10%;
 }
 .card-image#card2 {
-    right: 15%;
+    bottom: -15%;
 }
 .card-image#card3 {
-    right: 10%;
+    bottom: -20%;
 }
 .card-image#card4 {
-    right: 5%;
+    bottom: -25%;
 }
 .card-image#card5 {
-    right: 0;
-}
-
-.card-image.hide {
-    right: -100% !important;
+    bottom: -30%;
 }
 
 .effect {
@@ -61,4 +50,22 @@ img {
 }
 .effect img {
     position: absolute;
+}
+
+#booster {
+    position: absolute;
+    bottom: -115%;
+    background-color: green;
+    height: 200px;
+    width: 175px;
+    left: 15%;
+    transform: translate(0, -90%);
+    transition: bottom 1s ease-in-out, transform 1s ease-in-out;
+}
+#booster.hide {
+    bottom: -130% !important;
+}
+#booster img {
+    height: 100%;
+    width: 100%;
 }

@@ -107,6 +107,11 @@ const cardList = {
     'Dreihörniger Drache [SCR]': 'https://images.ygoprodeck.com/images/cards/39111158.jpg',
 };
 
+function showBooster() {
+    const boosterElement = document.getElementById('booster');
+    removeHideClass(boosterElement);
+}
+
 function getRandomEntries(amount) {
     const imageKeys = [];
 
@@ -167,30 +172,27 @@ function reset(amount) {
         cardElement.classList.add('hide');
         cardElement.getElementsByClassName('effect')[0].classList.add('hide');
     }
+
+    document.getElementById('booster').classList.add('hide');
 }
 
 function removeHideClass(element) {
     while (element.classList.contains('hide')) {
         element.classList.remove('hide');
     }
-
-    console.log(element.className, element.classList);
 }
 
 (() => {
     document.getElementById('trigger').addEventListener('click', () => {
         const amount = 5;
-        const isHidden = document.getElementById('card1').classList.contains('hide');
 
         reset(amount);
+        showBooster();
 
-        if (isHidden) {
-            const entryKeys = getRandomEntries(amount);
-            changeImages(entryKeys);
-        }
+        const entryKeys = getRandomEntries(amount);
+        changeImages(entryKeys);
         fadeInOut(amount);
 
-        reset(amount);
         let interval = setInterval(
             () => {
                 reset(amount);
