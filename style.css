@@ -30,8 +30,24 @@ img {
     transition: right 1s ease-in-out, transform 1s ease-in-out; /* Sicherstellen, dass die Transition auch hier definiert ist */
 }
 
+.card-image#card1 {
+    right: 20%;
+}
+.card-image#card2 {
+    right: 15%;
+}
+.card-image#card3 {
+    right: 10%;
+}
+.card-image#card4 {
+    right: 5%;
+}
+.card-image#card5 {
+    right: 0;
+}
+
 .card-image.hide {
-    right: -100%; /* Position außerhalb des Containers */
+    right: -100% !important;
 }
 
 .effect {
@@ -40,31 +56,9 @@ img {
     position: absolute;
     top: 0;
 }
-.effect .item {
+.effect.hide {
+    display: none;
+}
+.effect img {
     position: absolute;
-}
-.effect .item.star1 {
-    top: 10%;
-    left: 21%;
-    transform: rotate(90deg);
-}
-.effect .item.star2 {
-    top: 29%;
-    left: 65%;
-    transform: rotate(50deg);
-}
-.effect .item.star3 {
-    left: 16%;
-    top: 57%;
-    transform: rotate(76deg);
-}
-.effect .item.star4 {
-    left: 53%;
-    top: 67%;
-    transform: rotate(5deg);
-}
-.effect .item.star5 {
-    left: 85%;
-    top: 48%;
-    transform: rotate(165deg);
 }
